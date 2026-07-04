@@ -1,0 +1,10 @@
+{
+  "projectId": "gaanpeeth",
+  "appId": "1:972406801746:web:6a6626aa9ed3604ecd268b",
+  "apiKey": "AIzaSyA4h_oviG7T1Ay2EeNSZ_bitzLHedoFACU",
+  "authDomain": "gaanpeeth.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "gaanpeeth.firebasestorage.app",
+  "messagingSenderId": "972406801746",
+  "measurementId": "G-DP27HYV2Y7"
+}

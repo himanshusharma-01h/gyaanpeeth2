@@ -1,0 +1,42 @@
+rules_version = '2';
+
+// COPY AND PASTE THESE RULES INTO YOUR FIREBASE CONSOLE:
+// 1. Go to https://console.firebase.google.com/
+// 2. Select your project "gaanpeeth"
+// 3. Go to "Firestore Database" from the left menu
+// 4. Click on the "Rules" tab
+// 5. Replace the existing contents with this entire block and click "Publish"
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Universities collection
+    match /universities/{document} {
+      allow read, write: if true;
+    }
+    
+    // Courses collection
+    match /courses/{document} {
+      allow read, write: if true;
+    }
+    
+    // Blogs collection
+    match /blogs/{document} {
+      allow read, write: if true;
+    }
+    
+    // Reviews collection
+    match /reviews/{document} {
+      allow read, write: if true;
+    }
+    
+    // Admissions applications collection
+    match /admissions/{document} {
+      allow read, write: if true;
+    }
+    
+    // Settings collection (homepage content, etc.)
+    match /settings/{document} {
+      allow read, write: if true;
+    }
+  }
+}
