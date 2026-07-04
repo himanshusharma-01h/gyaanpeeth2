@@ -6,6 +6,8 @@ import {
 } from 'lucide-react';
 import CounsellorBot from './CounsellorBot';
 import { University, Course } from '../types';
+import logoHeader from '../assets/images/regenerated_image_1783179368539.jpg';
+import logoFooter from '../assets/images/regenerated_image_1783179370285.jpg';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -101,7 +103,7 @@ export default function Layout({
           >
             <div className="w-10 h-10 rounded-2xl shadow-md transition-all group-hover:scale-105 overflow-hidden border border-slate-100 flex items-center justify-center shrink-0">
               <img 
-                src="/src/assets/images/regenerated_image_1783179368539.jpg" 
+                src={logoHeader} 
                 alt="GyaanPeeth Logo" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -234,7 +236,7 @@ export default function Layout({
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-xl overflow-hidden border border-slate-700 shadow-md flex items-center justify-center shrink-0">
                 <img 
-                  src="/src/assets/images/regenerated_image_1783179370285.jpg" 
+                  src={logoFooter} 
                   alt="GyaanPeeth Logo" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
