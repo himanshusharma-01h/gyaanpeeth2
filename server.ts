@@ -18,6 +18,7 @@ import {
 } from "firebase/firestore";
 import fs from "fs";
 import { initialUniversities } from "./src/data/universitiesData";
+import firebaseConfig from "./firebase-applet-config.json";
 
 // Load environment variables
 dotenv.config();
@@ -29,12 +30,6 @@ const PORT = 3000;
 app.use(express.json());
 
 // Initialize Firebase client SDK in Node.js
-const firebaseConfigPath = path.join(process.cwd(), "firebase-applet-config.json");
-let firebaseConfig: any = {};
-if (fs.existsSync(firebaseConfigPath)) {
-  firebaseConfig = JSON.parse(fs.readFileSync(firebaseConfigPath, "utf8"));
-}
-
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp, firebaseConfig.firestoreDatabaseId || "(default)");
 

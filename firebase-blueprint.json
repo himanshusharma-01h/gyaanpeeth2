@@ -1,0 +1,142 @@
+{
+  "entities": {
+    "University": {
+      "title": "University",
+      "description": "An approved higher-education institution listed on the GyaanPeeth platform.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "logo": { "type": "string" },
+        "coverImage": { "type": "string" },
+        "type": { "type": "string" },
+        "location": { "type": "string" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "number" },
+        "establishedYear": { "type": "integer" },
+        "rank": { "type": "string" },
+        "shortDesc": { "type": "string" },
+        "longDesc": { "type": "string" },
+        "feeRange": { "type": "string" },
+        "accreditedBy": { "type": "array" },
+        "ugcApproved": { "type": "boolean" },
+        "aicteApproved": { "type": "boolean" },
+        "naacGrade": { "type": "string" },
+        "placementSalaryAvg": { "type": "string" },
+        "placementPercentage": { "type": "number" },
+        "topRecruiters": { "type": "array" },
+        "coursesOffered": { "type": "array" },
+        "faculty": { "type": "array" },
+        "gallery": { "type": "array" },
+        "faqs": { "type": "array" }
+      },
+      "required": ["id", "name"]
+    },
+    "Course": {
+      "title": "Course",
+      "description": "An online degree program details template listed on GyaanPeeth.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "level": { "type": "string" },
+        "duration": { "type": "string" },
+        "category": { "type": "string" },
+        "fee": { "type": "string" },
+        "description": { "type": "string" },
+        "syllabus": { "type": "array" },
+        "careerProspects": { "type": "array" }
+      },
+      "required": ["id", "name"]
+    },
+    "Blog": {
+      "title": "Blog",
+      "description": "An educational guide or news blog post published by advisors.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "author": { "type": "string" },
+        "date": { "type": "string" },
+        "readTime": { "type": "string" },
+        "image": { "type": "string" },
+        "tags": { "type": "array" }
+      },
+      "required": ["id", "title"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "A verified user-contributed review for a university.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "universityId": { "type": "string" },
+        "universityName": { "type": "string" },
+        "userName": { "type": "string" },
+        "rating": { "type": "integer" },
+        "date": { "type": "string" },
+        "comment": { "type": "string" },
+        "isVerified": { "type": "boolean" }
+      },
+      "required": ["id", "universityId", "userName", "rating", "comment"]
+    },
+    "Admission": {
+      "title": "Admission",
+      "description": "An online admission or counselling inquiry application.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "location": { "type": "string" },
+        "courseInterested": { "type": "string" },
+        "universityInterested": { "type": "string" },
+        "qualification": { "type": "string" },
+        "status": { "type": "string" },
+        "date": { "type": "string" },
+        "scholarshipClaimed": { "type": "string" }
+      },
+      "required": ["id", "name", "email", "phone"]
+    },
+    "HomepageSettings": {
+      "title": "HomepageSettings",
+      "description": "Settings for announcement bar, title tagline, and main banner details.",
+      "type": "object",
+      "properties": {
+        "announcement": { "type": "string" },
+        "tagline": { "type": "string" },
+        "subTagline": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "universities": {
+      "schema": "University",
+      "description": "Approved and listed universities"
+    },
+    "courses": {
+      "schema": "Course",
+      "description": "General courses/degrees reference information"
+    },
+    "blogs": {
+      "schema": "Blog",
+      "description": "News and informational blogs"
+    },
+    "reviews": {
+      "schema": "Review",
+      "description": "User reviews for universities"
+    },
+    "admissions": {
+      "schema": "Admission",
+      "description": "Admission and consultation inquiries"
+    },
+    "settings": {
+      "schema": "HomepageSettings",
+      "description": "Platform global configuration variables"
+    }
+  }
+}
